@@ -3,6 +3,7 @@ numpy (1:1.19.5-1pexip1) pexip; urgency=medium
   * Prepare Pexip packaging
   * Switch build-deps for buster:
     * dvisvgm -> texlive-binaries
+  * Remove doc package to avoid need for build-deps from bullseye.
 
  -- Mark Hymers <mark.hymers@pexip.com>  Tue, 05 Apr 2022 21:27:34 +0000
 

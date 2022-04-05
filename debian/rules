@@ -21,9 +21,10 @@ override_dh_auto_build-arch:
 		python$$v-dbg setup.py build; \
 	done
 
-override_dh_auto_build-indep: override_dh_auto_build-arch
-	# build doc only for default python version
-	(export MPLCONFIGDIR=. ; make -C doc html PYTHON=python3 PYTHONPATH=../$(PY3LIBPATH))
+# Enforce no doc build
+#override_dh_auto_build-indep: override_dh_auto_build-arch
+#	# build doc only for default python version
+#	(export MPLCONFIGDIR=. ; make -C doc html PYTHON=python3 PYTHONPATH=../$(PY3LIBPATH))
 
 override_dh_auto_clean:
 	rm -rf build/
@@ -106,10 +107,10 @@ ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	rm debian/python3-numpy/usr/lib/python3*/*-packages/*/*/*.cpython-3?d*.so
 endif
 
-
-override_dh_installdocs-indep:
-	dh_installdocs -i
-	dh_sphinxdoc -i
+# Enforce no doc build
+#override_dh_installdocs-indep:
+#	dh_installdocs -i
+#	dh_sphinxdoc -i
 
 override_dh_auto_test:
 	echo "pass"
