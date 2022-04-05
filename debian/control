@@ -1,8 +1,9 @@
 Source: numpy
 Section: python
 Priority: optional
-Maintainer: Sandro Tosi <morph@debian.org>
-Uploaders: Debian Python Team <team+python@tracker.debian.org>,
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Sandro Tosi <morph@debian.org>
+XSBC-Pexip-Original-Uploaders: Debian Python Team <team+python@tracker.debian.org>,
 Build-Depends-Indep: python-imageio-doc <!nodoc>,
                      python-matplotlib-doc <!nodoc>,
                      python-scipy-doc <!nodoc>,
@@ -32,6 +33,7 @@ Standards-Version: 4.5.1
 Vcs-Git: https://salsa.debian.org/python-team/packages/numpy.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/numpy
 Homepage: http://www.numpy.org/
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
 
 Package: python3-numpy
 Architecture: any
