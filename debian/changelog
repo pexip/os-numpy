@@ -1,3 +1,10 @@
+numpy (1:1.19.5-1pexip2) pexip; urgency=medium
+
+  * Migrate source package to main.
+  * Migrate python3-numpy binary package to main.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Wed, 06 Apr 2022 10:41:45 +0000
+
 numpy (1:1.19.5-1pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
