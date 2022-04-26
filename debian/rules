@@ -101,7 +101,7 @@ override_dh_compress:
 	dh_compress -X.js -Xobjects.inv -X.txt
 
 override_dh_strip:
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
+ifeq (,$(filter nostrip,$(DEB_BUILD_PROFILES)))
 	dh_strip -ppython3-numpy --dbg-package=python3-numpy-dbg
 	# dh_strip seemingly doesn't catch the PEP 3149-style debug names
 	rm debian/python3-numpy/usr/lib/python3*/*-packages/*/*/*.cpython-3?d*.so
@@ -128,7 +128,7 @@ override_dh_auto_install:
 	# The reason is that numpy tries hard to not let you run it from the
 	# source directory, so we need to mess with the import order so to
 	# select the code in the installation path
-ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
+ifeq (,$(findstring nocheck,$(DEB_BUILD_PROFILES)))
 	echo "TEST STARTED" `date`
 	set -e; for v in $(PY3VERS) ; do \
 		cd debian ; \
