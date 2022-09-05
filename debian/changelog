@@ -1,3 +1,9 @@
+numpy (1:1.19.5-1pexip6) pexip-bullseye; urgency=medium
+
+  * Bullseye rebuild for ARM64 inclusion
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 05 Sep 2022 10:34:49 +0100
+
 numpy (1:1.19.5-1pexip5) pexip-bullseye; urgency=medium
 
   * Main bullseye build
