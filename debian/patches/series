@@ -5,3 +5,7 @@ adapt_swig_docs_to_debian.patch
 0006-disable-asserts-on-ppc-with-broken-malloc-only-longd.patch
 debian_skip_tests.patch
 sphinx_no_dashW.patch
+setup-py-accept-config.patch
+distutils-check-usr-include.patch
+#python3.11.patch
+docs_disable_switcher_version.patch
