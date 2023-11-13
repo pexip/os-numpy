@@ -11,4 +11,8 @@ the package, see the :ref:`API reference <reference>`.
 .. toctree::
    :maxdepth: 1
 
-   ionumpy
+   how-to-how-to
+   how-to-io
+   how-to-index
+   how-to-verify-bug
+   how-to-partition

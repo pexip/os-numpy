@@ -1,7 +1,7 @@
 #!/bin/sh
 set -efu
 
-PYS=$(py3versions -rv 2>/dev/null)
+PYS=$(py3versions -sv 2>/dev/null)
 
 cd "$AUTOPKGTEST_TMP"
 
@@ -18,6 +18,4 @@ for py in 3 $PYS; do
     echo "=== f2py$py ==="
     f2py$py -c -m hello hello.f 2>&1
     python$py -c 'import hello; assert hello.foo(4) == 5'
-    f2py$py-dbg -c -m hello hello.f 2>&1
-    python$py-dbg -c 'import hello; assert hello.foo(4) == 5' 2>&1
 done
