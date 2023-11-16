@@ -1,3 +1,9 @@
+numpy (1:1.24.2-1pexip1) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:13:38 +0000
+
 numpy (1:1.24.2-1) unstable; urgency=medium
 
   * New upstream release
