@@ -1,3 +1,9 @@
+numpy (1:1.24.2-1+pexip24u3) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:14:03 +0000
+
 numpy (1:1.24.2-1pexip2) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution
