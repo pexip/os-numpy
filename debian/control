@@ -37,6 +37,7 @@ Provides: dh-sequence-numpy3,
           python3-numpy-dev,
           ${numpy3:Provides},
           ${python3:Provides},
+Conflicts: python-numpy
 Description: Fast array facility to the Python 3 language
  Numpy contains a powerful N-dimensional array object, sophisticated
  (broadcasting) functions, tools for integrating C/C++ and Fortran
