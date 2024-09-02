@@ -1,3 +1,16 @@
+numpy (1:1.24.2-1+pexip24u4+deb12u1) pexip; urgency=medium
+
+  * New upstream release
+  * Remove the newly-added debian/gbp.conf
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Mon, 02 Sep 2024 17:27:36 +0100
+
+numpy (1:1.24.2-1+deb12u1) bookworm; urgency=medium
+
+  * Declare conflict with python-numpy due to f2py (Closes: #1053649)
+
+ -- Timo Röhling <roehling@debian.org>  Sun, 05 May 2024 09:56:59 +0200
+
 numpy (1:1.24.2-1+pexip24u3) pexip-bookworm; urgency=medium
 
   * New versioning scheme
