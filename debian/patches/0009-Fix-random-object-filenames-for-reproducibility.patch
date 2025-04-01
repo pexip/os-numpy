@@ -1,0 +1,40 @@
+From: =?utf-8?q?Timo_R=C3=B6hling?= <roehling@debian.org>
+Date: Thu, 6 Mar 2025 15:32:56 +0100
+Subject: Fix random object filenames for reproducibility
+
+---
+ numpy/_core/meson.build | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/numpy/_core/meson.build b/numpy/_core/meson.build
+index 6b6fbd3..7a5fc20 100644
+--- a/numpy/_core/meson.build
++++ b/numpy/_core/meson.build
+@@ -1181,7 +1181,7 @@ if CPU_FEATURES_NAMES.contains('AVX512_SPR')
+   svml_file_suffix += ['h_la']
+ endif
+ 
+-svml_objects = []
++svml_sources = []
+ if use_svml
+   foreach svml_func : [
+     'acos', 'acosh', 'asin',
+@@ -1196,7 +1196,7 @@ if use_svml
+     'tanh'
+   ]
+     foreach svml_sfx : svml_file_suffix
+-      svml_objects += [
++      svml_sources += [
+         'src/umath/svml/linux/avx512/svml_z0_'+svml_func+'_'+svml_sfx+'.s'
+       ]
+     endforeach
+@@ -1214,8 +1214,8 @@ py.extension_module('_multiarray_umath',
+     src_numpy_api[1],  # __multiarray_api.h
+     src_umath_doc_h,
+     npy_math_internal_h,
++    svml_sources,
+   ],
+-  objects: svml_objects,
+   c_args: c_args_common,
+   cpp_args: cpp_args_common,
+   include_directories: [
