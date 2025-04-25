@@ -1,7 +1,7 @@
-from .common import Benchmark, get_squares
+from .common import Benchmark, get_squares, get_squares_
 
 import numpy as np
-from io import StringIO
+from io import SEEK_SET, StringIO, BytesIO
 
 
 class Copy(Benchmark):
@@ -67,6 +67,15 @@ class Savez(Benchmark):
         np.savez('tmp.npz', **self.squares)
 
 
+class LoadNpyOverhead(Benchmark):
+    def setup(self):
+        self.buffer = BytesIO()
+        np.save(self.buffer, get_squares_()['float32'])
+
+    def time_loadnpy_overhead(self):
+        self.buffer.seek(0, SEEK_SET)
+        np.load(self.buffer)
+
 class LoadtxtCSVComments(Benchmark):
     # benchmarks for np.loadtxt comment handling
     # when reading in CSV files
@@ -79,7 +88,7 @@ class LoadtxtCSVComments(Benchmark):
         # unfortunately, timeit will only run setup()
         # between repeat events, but not for iterations
         # within repeats, so the StringIO object
-        # will have to be rewinded in the benchmark proper
+        # will have to be rewound in the benchmark proper
         self.data_comments = StringIO('\n'.join(data))
 
     def time_comment_loadtxt_csv(self, num_lines):
