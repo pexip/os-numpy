@@ -1,3 +1,9 @@
+numpy (1:2.2.4+ds-1+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:43:40 +0100
+
 numpy (1:2.2.4+ds-1) unstable; urgency=medium
 
   * New upstream version 2.2.4+ds
