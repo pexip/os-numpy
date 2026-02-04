@@ -1,3 +1,9 @@
+numpy (1:2.2.4+ds-1+pexip25u3) pexip-trixie; urgency=medium
+
+  * Rebuild to move -dev package to main.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Wed, 04 Feb 2026 10:20:39 +0000
+
 numpy (1:2.2.4+ds-1+pexip25u2) pexip-trixie; urgency=medium
 
   * Trixie build for product distribution
